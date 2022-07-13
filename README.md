@@ -115,9 +115,9 @@ public interface CouleurRepository extends JpaRepository<Couleur, Integer> {
 
 ### *Run as Spring Boot App* et voir avec navigateur & swagger
 
-[Lien avec Swagger](localhost:8080/swagger-ui/index.html)
+[Lien avec Swagger](http://localhost:8080/swagger-ui/index.html)
 
-[Lien avec navigateur](localhost:8080/couleur/all)
+[Lien avec navigateur](http://localhost:8080/couleur/all)
 
 Et voilà !
 
