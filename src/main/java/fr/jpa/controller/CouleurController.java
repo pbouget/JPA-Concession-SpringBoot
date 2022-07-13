@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.jpa.model.Couleur;
+import fr.jpa.model.Test;
 import fr.jpa.repository.CouleurRepository;
+import fr.jpa.repository.TestRepository;
 
 @RestController
 @CrossOrigin("*")
@@ -17,13 +19,21 @@ import fr.jpa.repository.CouleurRepository;
 public class CouleurController {
 	
 	@Autowired
-	CouleurRepository repository;
+	CouleurRepository couleurRepository;
+	
+	@Autowired
+	TestRepository testRepository;
 
 	@GetMapping("/all")
-	public List<Couleur> findAll()
+	public List<Couleur> findAllCouleur()
 	{
-		return repository.findAll();
+		return couleurRepository.findAll();
 	}
 	
+	@GetMapping("/allTest")
+	public List<Test> findAllTest()
+	{
+		return testRepository.findAll();
+	}
 	
 }

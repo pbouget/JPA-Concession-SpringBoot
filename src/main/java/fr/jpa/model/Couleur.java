@@ -31,9 +31,6 @@ public class Couleur implements Serializable {
 
 	@Column(nullable=false, length=45)
 	private String nom;
-	
-	@Column(length = 10)
-	private String test;
 
 	//bi-directional many-to-one association to Vehicule
 	@OneToMany(mappedBy="couleur")
@@ -79,14 +76,6 @@ public class Couleur implements Serializable {
 		vehicule.setCouleur(null);
 
 		return vehicule;
-	}
-
-	public String getTest() {
-		return test;
-	}
-
-	public void setTest(String test) {
-		this.test = test;
 	}
 
 }

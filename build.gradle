@@ -15,7 +15,8 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	developmentOnly 'org.springframeworot:spring-boot-dek.bovtools'
+	implementation group: 'com.vladmihalcea', name: 'hibernate-types-55', version: '2.16.3'
+//	developmentOnly 'org.springframework.boot:spring-boot-dek.bovtools'
 	implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
 	runtimeOnly 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
